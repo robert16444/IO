@@ -1,13 +1,12 @@
 #pragma once
-#define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
 
 #include<iostream>
 #include<vector>
 #include<string>
 #include<fstream>
-#include<experimental/filesystem>
+#include<filesystem>
 
-namespace fs = std::experimental::filesystem;
+namespace fs = std::filesystem;
 
 std::vector<std::string> getFilesArray() {
 

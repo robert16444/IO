@@ -11,7 +11,7 @@ int main() {
 	vector<int> sizes = getFileSizesArray(files);
 
 	for (int i = 0; i < files.size(); i++) {
-		cout << files[i] << sizes[i] << "B" << endl;
+		cout << files[i] << " " << sizes[i] << "B" << endl;
 	}
 
 }
