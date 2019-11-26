@@ -16,21 +16,21 @@ std::vector<std::string> getFilesArray() {
 	{
 		if (!fs::is_regular_file(item.path()) || item.path().extension() != ".cpp" && item.path().extension() != ".h" && item.path().extension() != ".hpp")
 			continue;
-		filesList.push_back(item.path().string().substr(2));
+		filesList.push_back(item.path().string().substr(1));
 	}
 
 	return filesList;
 }
-
+/*
 std::vector<int> getFileSizesArray(std::vector<std::string> files) {
 	std::vector<int> Sizes;
 
 	for (auto i = 0; i < files.size(); i++) {
-		Sizes.push_back(fs::file_size(files[i]));
+		Sizes.push_back(fs::file_size(files[i].substr(1)));
 	}
 
 	return Sizes;
-}
+}*/
 
 void genCfg(std::vector<std::string> filesList){
 	std::fstream file;
